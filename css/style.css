@@ -1,0 +1,90 @@
+:root {
+  --main-color: #ffc527;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  text-align: right;
+}
+/* Start Navbar */
+.navbar {
+  box-shadow: 0 0 10px #ddd;
+}
+.navbar .navbar-nav .nav-item a {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.navbar .navbar-nav .nav-item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  right: 100%;
+  bottom: 0;
+  transition: 0.3s;
+}
+.navbar .navbar-nav .nav-item a:hover::before {
+  right: 0;
+}
+.navbar .navbar-nav .nav-item a:hover {
+  color: var(--main-color);
+}
+/* End Navbar */
+/* Start Hero */
+.hero {
+  min-height: 80vh;
+  margin-top: 72px;
+  background-image: url("/images/slide-bg-1.jpg");
+  background-size: cover;
+}
+.hero .text {
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .hero .text {
+    width: 93% !important;
+  }
+}
+/* End Hero */
+/* Start Project */
+.project h2::after,
+.blog .news::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: var(--main-color);
+  bottom: -8px;
+  right: 0;
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  min-height: 450px;
+  background-image: url("../images/subscribe-our-newsletter-bg.jpg");
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .subscribe {
+    text-align: center;
+  }
+  .content form {
+    justify-content: center;
+  }
+  .content form button {
+    margin-right: 0 !important;
+    margin-top: 15px;
+  }
+}
+/* End Subscribe */
+/* Start Footer */
+footer {
+  background-color: #071c33;
+}
+/* End Footer */
